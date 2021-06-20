@@ -1,0 +1,7 @@
+sklearn
+pandas
+numpy
+jupyterlab
+tensorflow>2
+argparse
+silence-tensorflow
