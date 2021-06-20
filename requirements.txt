@@ -1,8 +1,7 @@
 sklearn
 pandas
-seaborn
-matplotlib
 numpy
-scipy
 jupyterlab
 tensorflow>2
+argparse
+silence-tensorflow
