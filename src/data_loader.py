@@ -106,7 +106,8 @@ class DataLoader(object):
             df_target = df_target_train.copy()
         else:
             df_raw = df_raw_test.copy()
-            df_target = df_target_test.copy()
+            if df_target is not None:
+                df_target = df_target_test.copy()
         
         df_raw = du.adjust_dates(df_raw, du.dates)
         df_raw = du.remove_non_numerical(df_raw)

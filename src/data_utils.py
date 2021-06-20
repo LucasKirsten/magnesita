@@ -302,5 +302,8 @@ def split_train_test(df_raw, df_target, ratio):
     assert ratio>=0 and ratio<1, 'Ratio for spliting the data should be between [0,1)'
     
     if ratio==0:
-        return df_raw[:len(df_target)], df_raw[:len(df_target)], df_target, df_target
+        if df_target is not None:
+            return df_raw[:len(df_target)], df_raw[:len(df_target)], df_target, df_target
+        else:
+            return df_raw, df_raw, None,None
     return train_test_split(df_raw[:len(df_target)], df_target, test_size=ratio)
