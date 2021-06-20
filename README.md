@@ -15,15 +15,15 @@
 
 ### Installation
 
-I recommend using a virtual enviroment manager, such as (Anaconda)[https://www.anaconda.com/] for installing the dependecies.
+I recommend using a virtual enviroment manager, such as [Anaconda](https://www.anaconda.com/) for installing the dependecies.
 
-For conda environments, use:
+For conda environments, create a virtual environment with:
 
 ```
 conda create -n magnesita python=3.9 pip
 ```
 
-Then activate your enviroment using:
+Then activate your environment using:
 
 ```
 conda activate magnesita
@@ -43,7 +43,7 @@ Use the *train.py* script for training your model. For example:
 python train.py -pr data/md_raw_dataset.csv -pt data/md_target_dataset.csv -ps ./saves -v
 ```
 
-All models and data requires for then evaluate the training will be stored in the folder defined in the *-ps* argument. The split between training and testing data is also saved in this folder for posterior use in the test step.
+All models and data require for evaluating the training will be stored in the folder defined in the *-ps* argument. The split between training and testing data is also saved in this folder for posterior use in the test step.
 
 Example of output for training with *n_split=2* for the KFold algorithm:
 
@@ -72,9 +72,9 @@ For testing the model, use the script *test.py*. For example:
 python test.py -pr saves/test_raw.csv -pt saves/test_target.csv -ps ./saves
 ```
 
-You can specify or not a path for the targets. If you do not specify, there will be no evaluation of the model, and only a file *predicted.csv* will be created with the predicted values for the input data.
+You can specify or not a path for the targets. If you do not specify, there will be no evaluation log of the model, and only a file *predicted.csv* will be created with the predicted values for the input data.
 
-You should use the same format csv data as provided in the training step for testing the model! Otherwise, it is not guaranteed good results.
+You should use the same csv data format as provided in the training step for testing the model! Otherwise, it is not guaranteed good results.
 
 Example of output for testing the model with target file:
 ```
